@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_cart/screen/BasicAnimation.dart';
 import 'package:shopping_cart/screen/ShoppingCart.dart';
 
 void main() {
@@ -58,17 +59,21 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Text(title),
         onPressed: () {
           if (title == "Shopping cart") {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => ShoppingCart(
-                  title: title,
-                ),
-              ),
-            );
+            navigateToShoppingCart(context, title);
+          } else if (title == "Animation") {
+            navigateToAnimation(context, title);
           }
         },
       ),
     );
   }
+
+  void navigateToAnimation(BuildContext context, String title) => Navigator.push(context, MaterialPageRoute(builder: (context) => BasicAnimation()));
+
+  void navigateToShoppingCart(BuildContext context, String title) => Navigator.push(
+      context,
+      MaterialPageRoute(
+          builder: (context) => ShoppingCart(
+                title: title,
+              )));
 }
