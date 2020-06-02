@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_cart/screen/BasicAnimation.dart';
+import 'package:shopping_cart/screen/BasicProvider.dart';
 import 'package:shopping_cart/screen/ShoppingCart.dart';
 
 void main() {
@@ -33,6 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     itemList.add("Shopping cart");
     itemList.add("Animation");
+    itemList.add("Basic Provider");
   }
 
   @override
@@ -62,11 +64,15 @@ class _MyHomePageState extends State<MyHomePage> {
             navigateToShoppingCart(context, title);
           } else if (title == "Animation") {
             navigateToAnimation(context, title);
+          } else if (title == "Basic Provider") {
+            navigateToBasicProvider(context);
           }
         },
       ),
     );
   }
+
+  void navigateToBasicProvider(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => BasicProvider()));
 
   void navigateToAnimation(BuildContext context, String title) => Navigator.push(context, MaterialPageRoute(builder: (context) => BasicAnimation()));
 
