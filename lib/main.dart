@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_cart/screen/BasicAnimation.dart';
 import 'package:shopping_cart/screen/BasicProvider.dart';
+import 'package:shopping_cart/screen/GifImage.dart';
 import 'package:shopping_cart/screen/ShoppingCart.dart';
 
 void main() {
@@ -35,6 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
     itemList.add("Shopping cart");
     itemList.add("Animation");
     itemList.add("Basic Provider");
+    itemList.add("GIF Images");
+    itemList.add("Grid View");
   }
 
   @override
@@ -66,11 +69,19 @@ class _MyHomePageState extends State<MyHomePage> {
             navigateToAnimation(context, title);
           } else if (title == "Basic Provider") {
             navigateToBasicProvider(context);
+          } else if (title == "GIF Images") {
+            navigateToGifImages(context);
+          } else if(title == "Grid View"){
+
           }
         },
       ),
     );
   }
+
+  void navigateToGridView(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => GifImages()));
+
+  void navigateToGifImages(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => GifImages()));
 
   void navigateToBasicProvider(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => BasicProvider()));
 
