@@ -4,6 +4,9 @@ class GridViewExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Grid view example"),
+      ),
       body: buildGridView(context),
     );
   }
@@ -17,7 +20,7 @@ class GridViewExample extends StatelessWidget {
           return Center(
             child: Text(
               'Item $index',
-              style: Theme.of(context).textTheme.headline2,
+              style: Theme.of(context).textTheme.headline4,
             ),
           );
         },

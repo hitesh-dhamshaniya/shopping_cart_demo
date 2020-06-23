@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_cart/screen/BasicAnimation.dart';
 import 'package:shopping_cart/screen/BasicProvider.dart';
+import 'package:shopping_cart/screen/FacebookLoginExample.dart';
 import 'package:shopping_cart/screen/GifImage.dart';
+import 'package:shopping_cart/screen/GridViewExample.dart';
 import 'package:shopping_cart/screen/ShoppingCart.dart';
 
 void main() {
@@ -38,6 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
     itemList.add("Basic Provider");
     itemList.add("GIF Images");
     itemList.add("Grid View");
+    itemList.add("Facebook login");
+    itemList.add("SQL Lite Demo");
   }
 
   @override
@@ -71,15 +75,19 @@ class _MyHomePageState extends State<MyHomePage> {
             navigateToBasicProvider(context);
           } else if (title == "GIF Images") {
             navigateToGifImages(context);
-          } else if(title == "Grid View"){
-
-          }
+          } else if (title == "Grid View") {
+            navigateToGridView(context);
+          } else if (title == "Facebook login") {
+            navigateToFacebookLogin(context);
+          } else if (title == "") {}
         },
       ),
     );
   }
 
-  void navigateToGridView(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => GifImages()));
+  void navigateToFacebookLogin(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => FacebookLoginExample()));
+
+  void navigateToGridView(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => GridViewExample()));
 
   void navigateToGifImages(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => GifImages()));
 
