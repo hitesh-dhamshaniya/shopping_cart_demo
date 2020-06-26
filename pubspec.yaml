@@ -30,6 +30,8 @@ dependencies:
   provider: ^4.1.2
   transparent_image: ^1.0.0
   flutter_facebook_login: ^3.0.0
+  backendless_sdk: ^1.1.8
+  assets_audio_player: ^2.0.6+4
   sqflite:
   path:
 dev_dependencies:
@@ -48,10 +50,12 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/
     - flutter.png
     - ball.png
     - chair.png
     - telescope.png
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
