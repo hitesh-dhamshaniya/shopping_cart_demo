@@ -32,6 +32,7 @@ dependencies:
   flutter_facebook_login: ^3.0.0
   backendless_sdk: ^1.1.8
   assets_audio_player: ^2.0.6+4
+  youtube_player_flutter: ^7.0.0+6
   sqflite:
   path:
 dev_dependencies:

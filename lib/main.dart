@@ -6,7 +6,9 @@ import 'package:shopping_cart/screen/FacebookLoginExample.dart';
 import 'package:shopping_cart/screen/GifImage.dart';
 import 'package:shopping_cart/screen/GridViewExample.dart';
 import 'package:shopping_cart/screen/ShoppingCart.dart';
+import 'package:shopping_cart/screen/quizer_app.dart';
 import 'package:shopping_cart/screen/xylophone_app.dart';
+import 'package:shopping_cart/screen/youtube_player_demo_app.dart';
 import 'package:sqflite/sqflite.dart';
 
 import 'model/dog_model.dart';
@@ -105,6 +107,8 @@ class _MyHomePageState extends State<MyHomePage> {
     itemList.add("Facebook login");
     itemList.add("SQL Lite Demo");
     itemList.add("Xylophone App");
+    itemList.add("Quizzer App");
+    itemList.add("Youtube App");
   }
 
   @override
@@ -144,11 +148,17 @@ class _MyHomePageState extends State<MyHomePage> {
             navigateToFacebookLogin(context);
           } else if (title == "Xylophone App") {
             navigateToXylophoneApp(context);
+          }else if(title == "Youtube App"){
+            navigateToYouTube(context);
           }
         },
       ),
     );
   }
+
+  void navigateToYouTube(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => YoutubePlayerDemoApp()));
+
+  void navigateToQuizzerApp(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => QuizzerApp()));
 
   void navigateToXylophoneApp(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => XylophoneApp()));
 
